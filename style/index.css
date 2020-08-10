@@ -34,6 +34,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1.5;
     font-size: 1.6rem;
+    min-height:100%;
 }
 ol, ul {
 	list-style: none;
@@ -104,11 +105,12 @@ table {
     height:30%;
     padding:2%;
     display:flex;
+    align-items:flex-end;
 }
 
 .top-info{
     width:50%;
-    padding:90px 10px 0 7%;
+    padding:6% 1% 0 7%;
 }
 
 .top-info a{
@@ -148,7 +150,6 @@ nav a, .top-info a, #bottom-contact {
 }
 
 .middle-container{
-    height:700px;
     width:100%;
     padding:10px;
     display:flex;
@@ -173,9 +174,11 @@ nav a, .top-info a, #bottom-contact {
 }
 
 footer{
+    width:100%;
     text-align:center;
     padding:50px 0;
     background:#EEEFEB;
+    bottom:0;
 }
 
 footer h4{
@@ -189,19 +192,21 @@ footer h4{
 }
 /* images icons */
 
-.top-image img{
+.top-image-container img{
     width:100%;
     height:auto;
+    border-radius:5px;
 
 }
 .top-image-container{
-    width:600px;
+    width:50%;
     height:auto;
 }
 
 .box img{
     width: 100%;
     height: 100%;
+    border-radius:5px;
 }
 
 #icon-insta img{
@@ -213,4 +218,29 @@ footer h4{
     width:55px;
     height:55px;
     display:inline-block;
+}
+
+/* Media Queries */
+
+@media (max-width:829px){
+    .middle-container{
+        justify-content:space-evenly;
+    }
+}
+
+@media (max-width:1014px){
+    .top-container{
+        flex-direction:column;
+        align-items:center;
+    }
+    .top-info{
+        width:97%;
+        padding:1%;
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    .top-image-container{
+        width:97%;
+    }
 }
