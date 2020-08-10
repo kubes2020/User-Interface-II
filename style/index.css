@@ -130,6 +130,19 @@ h1{
     font-family:Serif;
 }
 
+/* to hide the accessibility skip nav link */
+.hidden{
+    border: 0;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip; rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 nav{
     padding:0 0 0 30px;
 }
@@ -157,20 +170,22 @@ nav a, .top-info a, #bottom-contact {
     justify-content:space-between;
 }
 
+/* pic plus info */
 .box-info{
     width:250px;
     height:300px;
     margin:10px;
 }
 
-.box-info h4{
-    text-align:center;
-    vertical-align:baseline;
-}
-
+/* just the pic */
 .box{
     width:250px;
     height:250px;
+}
+
+.box-info h4{
+    text-align:center;
+    vertical-align:baseline;
 }
 
 footer{
@@ -209,7 +224,7 @@ footer h4{
     border-radius:5px;
 }
 
-#icon-insta img{
+#icon-instagram img{
     width:100%;
     height:100%;
 }
@@ -243,4 +258,46 @@ footer h4{
     .top-image-container{
         width:97%;
     }
+}
+
+@media (max-width:829px){
+    .box-info{
+        width:325px;
+        height:375px
+    }
+    .box{
+        width:325px;
+        height:325px;
+    }
+}
+
+@media (max-width:709px){
+    .box-info{
+        width:200px;
+        height:250px;
+    }
+    .box{
+        width:200px;
+        height:200px;
+    }
+}
+
+@media (max-width:500px){
+    .header-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    nav{
+        display:flex;
+        flex-direction:column;
+    }
+    nav a{
+        margin:0 0 2% 0;;
+    }
+    .top-image-container{
+        width:85%;
+    }
+    .top-info{
+        width:75%;
 }
